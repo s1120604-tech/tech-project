@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小波的首頁</title>
+  <style>
+    :root {
+      --main-color: #6c63ff;
+      --bg-color: #f5f6fa;
+      --text-color: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .link-button {
+      padding: 1rem;
+      border: none;
+      background-color: var(--main-color);
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .link-button:hover {
+      transform: scale(1.05);
+      background-color: #574fe2;
+    }
+
+    /* 動態背景小動畫 */
+    .background-animation {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: radial-gradient(circle at center, #e0e0ff, transparent);
+      z-index: -1;
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .link-button {
+        font-size: 1rem;
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-animation"></div>
+
+  <div class="container">
+    <h1>嗨，我是小波 👋</h1>
+    <p>高三學生｜喜歡動漫 🎨 和畫畫 ✏️<br>歡迎來到我的網頁！</p>
+
+    <div class="links">
+      <a href="https://github.com/你的帳號" target="_blank" class="link-button">🔗 GitHub</a>
+      <a href="mailto:你的信箱@example.com" class="link-button">📧 Email</a>
+      <a href="https://www.linkedin.com/in/你的ID" target="_blank" class="link-button">💼 LinkedIn</a>
+      <a href="https://www.instagram.com/你的IG帳號" target="_blank" class="link-button">📸 Instagram</a>
+    </div>
+  </div>
+
+</body>
+</html>
